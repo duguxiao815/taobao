@@ -1,0 +1,14 @@
+CACHE MANIFEST
+#version 1.0
+CACHE:
+    static/bootstrap/css/bootstrap.min.css
+    static/css/main.css
+    static/js/jquery-3.3.1.min.js
+    static/js/bootstrap-3.3.1.min.js
+    static/image/logo.png
+    static/image/banner1.jpg
+    static/image/news_dot.jpg
+    static/image/img2.jpg
+    static/image/img1.jpg
+NETWORK:
+    *
