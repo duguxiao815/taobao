@@ -1,0 +1,650 @@
+@media screen {
+  html {
+    font-size: 10px;
+
+    //阿里图标字体库
+    @font-face {
+      font-family: 'iconfont';  /* project id 603996 */
+      src: url('//at.alicdn.com/t/font_603996_yr0riiweiyqtzkt9.eot');
+      src: url('//at.alicdn.com/t/font_603996_yr0riiweiyqtzkt9.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_603996_yr0riiweiyqtzkt9.woff') format('woff'),
+      url('//at.alicdn.com/t/font_603996_yr0riiweiyqtzkt9.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_603996_yr0riiweiyqtzkt9.svg#iconfont') format('svg');
+    }
+    .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      background: #eeeeee;
+      ul,li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .cl {
+        clear: both;
+      }
+      //图标字体
+      //秒杀-闪电
+      .icon-miao {
+        &::before {
+          content: '\e6b9';
+        }
+      }
+      //心
+      .icon-heart {
+        &::before {
+          content: '\e641';
+        }
+      }
+      //APP应用
+      .icon-app {
+        &::before {
+          content: '\e652';
+        }
+      }
+      //手机
+      .icon-mobile {
+        &::before {
+          content: '\e637';
+        }
+      }
+      //PC端Web版
+      .icon-web {
+        &::before {
+          content: '\e640';
+        }
+      }
+      .row {
+        & > div, & > li {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      //统一区块样式
+      .ibox {
+        background: white;
+        margin-top: .8rem;
+        .ititle {
+          padding: .3rem 1rem;
+          height: 3.6rem;
+          line-height: 3rem;
+          div {
+            float: left;
+            &.title {
+              font-size: 1.6rem;
+              color: red;
+              width: calc(~'100% - 6rem');
+            }
+            &.more {
+              font-size: 1.2rem;
+              width: 6rem;
+              text-align: right;
+            }
+          }
+
+        }
+      }
+      //4列产品
+      .goods-ul-4 {
+        margin: 0rem;
+        & > li {
+          min-height: 12rem;
+        }
+      }
+      //3列产品
+      .goods-ul-3 {
+        margin: 0rem;
+        & > li {
+          min-height: 8rem;
+        }
+      }
+      //2列产品
+      .goods-ul-2 {
+        margin: 0rem;
+        & > li {
+          min-height: 16rem;
+        }
+      }
+      //主体
+      .body {
+        position: relative;
+
+        .search-box {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1000;
+          //height: 81.2rem;
+          //background: #fff;
+          //搜索栏
+          .search-bar {
+            width: 100%;
+            height: 5rem;
+            padding: .8rem 0;
+            background: url('./img/search_bg.png') repeat-x;
+            //网站图标
+            & > div {
+              float: left;
+              &.search-logo {
+                height: 3.4rem;
+                width: 5.8rem;
+                padding: 0 .8rem;
+              }
+              //搜索框
+              &.search-text-wrapper {
+                width: calc(~'100% - 10.6rem');
+                height: 3.4rem;
+                background: pink;
+                .search-text-dot {
+                  font-size: 1.6rem;
+                  top : .85rem ;
+                  color: gray;
+                }
+                .search-text-keywords {
+                  padding-left: 3.4rem;
+                }
+              }
+              .form-control-feedback {
+                left: 5.8rem;  //改称 left:0
+              }
+              //搜索框右侧按钮
+              &.search-btn {
+                float:right;
+                width: 4rem;
+                font-size: 2.6rem;
+                color: white;
+                line-height: 3.4rem;
+                &::before {
+                  content: '\e668';
+                }
+              }
+            }
+
+          }
+        }
+        //页面内容主体部分
+        .main {
+          //统一子section样式
+          & > section {
+            &.miao-box {
+
+            }
+            &.mid-banner {
+              margin-top: .8rem;
+              background: #ddd;
+              height: 11.6rem;
+            }
+          }
+
+          //幻灯图片区域（顶部广告区）
+          .top-banner-box {
+              //height: 25.7rem;
+              background: #eee;
+          }
+          .navigations {
+            height: 20rem;
+            padding: .5rem 0 0 0;
+            background: white;
+            //导航栏目图标
+            .nav-ul {
+              height: 7rem;
+              margin: .5rem 1rem ;
+              & > div {
+                padding: 0 1rem;
+                //图标
+                //商品分类
+                &.icon-cate {
+                  .nav-li-img {
+                    background: #ff4500;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e61d';
+                    }
+                  }
+                }
+                //我的关注、收藏
+                &.icon-collection {
+                  .nav-li-img {
+                    background: #FF3E96;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e600';
+                    }
+                  }
+                }
+                //购物车
+                &.icon-cart {
+                  .nav-li-img {
+                    background: #436EEE;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e62c';
+                    }
+                  }
+                }
+                //订单
+                &.icon-order {
+                  .nav-li-img {
+                    background: #ff6600;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e897';
+                    }
+                  }
+                }
+                //团购商品
+                &.icon-group {
+                  .nav-li-img {
+                    background: #6600ff;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e61a';
+                    }
+                  }
+                }
+                //积分商城
+                &.icon-integral {
+                  .nav-li-img {
+                    background: #FF306A;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e60b';
+                    }
+                  }
+                }
+                //客户服务
+                &.icon-service {
+                  .nav-li-img {
+                    background: #FD6205;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e698';
+                    }
+                  }
+                }
+                //个人中心
+                &.icon-member {
+                  .nav-li-img {
+                    background: #E624A1;
+                  }
+                  .iconfont {
+                    &::before {
+                      content: '\e602';
+                    }
+                  }
+                }
+
+                .nav-li-img {
+                  font-size: 2.6rem;
+                  line-height: 4rem;
+                  text-align: center;
+                  width: 4rem;
+                  height: 4rem;
+                  border-radius: 50%;
+                  margin: 0 auto;
+                  background: #f0f0f0;
+                  color: white;
+                }
+                .nav-li-text {
+                  width: 100%;
+                  font-size: 1.2rem;
+                  line-height: 3rem;
+                  height: 3rem;
+                  text-align: center;
+                }
+              }
+            }
+            .hot-news {
+              height: 3rem;
+              line-height: 3rem;
+              padding: .4rem 1rem;
+              border-top: 1px solid #eee;
+              .hot-news-logo {
+                  width: 6.2rem;
+                  float: left;
+              }
+              .hot-news-content {
+                width: calc(~'100% - 6.2rem');
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                overflow:hidden;
+                float: left;
+                .hot-news-content-inner {
+                  font-size: 1.4rem;
+                  .hot-news-content-dot {
+                    border: 1px solid #CC0066;
+                    border-radius: .4rem;
+                    font-size: 1.2rem;
+                    padding: .2rem;
+                    margin: 0 .5rem;
+                  }
+                }
+              }
+            }
+          }
+          //限时秒杀
+          .miao-box {
+            padding-bottom: .8rem;
+            background: white;
+            .container {
+              padding: 0;
+              margin: 0 .8rem;
+              .goods-ul-4 {
+                li {
+                  & > div{
+                    margin: 0 .4rem;
+                    &.img-box {
+                      background: #f6f6f6;
+                      //height: 8.175rem;
+                      border: 1px solid #f6f6f6;
+                    }
+                    &.img-text {
+                      padding: .5rem 0;
+                      .red {
+                        line-height: 1.4rem;
+                        font-size: 1.4rem;
+                        color: red;
+                        font-weight: 600;
+                      }
+                      .del {
+                        line-height: 1.2rem;
+                        font-size: 1.2rem;
+                        color: gray;
+                        text-decoration:line-through;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .brand-box,.jing-box {
+            .container {
+              padding: .5rem 0;
+              margin: 0 .8rem;
+              //background: gray;
+              .goods-ul-3 {
+                li {
+                  & > div {
+                    margin: 0 .7rem;
+                    text-align: center;
+                    &.img-box {
+                      background: #f9f9f9;
+                      border: 1px solid #eee;
+                    }
+                    &.img-text {
+                      height: 3rem;
+                      line-height: 3rem;
+                      font-size: 1.2rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .jing-box {
+            .container {
+              .goods-ul-3 {
+                li {
+                  .img-text {
+                    padding: .5rem 0;
+                    height: 6rem !important;
+                    line-height: 1.6rem !important;
+                    font-size: 1.2rem;
+                    text-align: left !important;
+                    .red {
+                      color: red;
+                      line-height: 1.2rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .mid-banner {
+            //height: 11.6rem;
+          }
+
+          //猜你喜欢
+          .guess-box {
+            .guess-title {
+              padding: 1.5rem 0;
+              font-size: 1.6rem;
+              line-height: 2.6rem;
+              .icon-heart {
+                color: red;
+              }
+              .sectit {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: gray;
+              }
+            }
+            .container {
+              padding: .5rem 0;
+              margin: 0 .4rem;
+              .goods-ul-2 {
+                li {
+                  div {
+                    margin: 0 .5rem;
+                    &.img-box {
+                      img {
+                        width: 100%;
+                      }
+                    }
+                    &.img-text {
+                      padding: .5rem 0;
+                      min-height: 7rem ;
+                      line-height: 2rem ;
+                      font-size: 1.4rem;
+                      text-align: left;
+                      .red {
+                        color: red;
+                        line-height: 1.8rem;
+                      }
+                      .del {
+                        line-height: 1.8rem;
+                        color: gray;
+                        text-decoration:line-through;
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+            .btn-loading {
+              margin: .5rem;
+              width: calc(~'100% - 1rem');
+            }
+          }
+          footer {
+            background: #f6f6f9;
+            nav {
+              margin: 2rem .5rem;
+              height: 1.2rem;
+              &.btm-nav {
+                height: 1.2rem;
+                div {
+                  height: 1.2rem;
+                  line-height: 1.2rem;
+                  border-left: 1px solid #ccc;
+                  &:first-child {
+                    border-left: 0;
+                  }
+                }
+              }
+            }
+            .btm-icon {
+              height: 5rem;
+              width: 80%;
+              margin: 1.5rem auto;
+              div {
+                height: inherit;
+                text-align: center;
+                div {
+                  font-size: 2.6rem;
+                  width: 5rem;
+                  margin: 0 auto;
+                  line-height: 5rem;
+                  border: 1px solid #ddd;
+                  border-radius: 50%;
+                }
+              }
+            }
+            .btm-box {
+              border-top: 1px solid #ddd;
+              height: 3.6rem;
+              line-height: 3.6rem;
+              font-size: 1.4rem;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  //最小屏幕,小于4寸,适配机型：iphone4,4s,5,5s,se > 小于320px
+  @media (max-width: 320px) {
+    html {
+      body {
+        background: #f6f6f6;
+        .body {
+          .search-box {
+            .search-bar {
+
+            }
+          }
+          .main{
+            //统一子section样式
+            & > section {
+              &.miao-box {
+
+              }
+              &.mid-banner {
+                margin-top: .8rem;
+                background: #ddd;
+                height: 9.6rem;
+              }
+            }
+
+            .top-banner-box {
+              //height: 20rem;
+            }
+            //限时秒杀
+            .miao-box {
+              .container {
+                .goods-ul-4 {
+                  li {
+                    & > div {
+                      &.img-box {
+                        height: 6.8rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+  //4.7寸屏幕,适配机型：iphone6,6s,7,8,X > 大于320且小于375px
+  @media (min-width: 321px) and (max-width: 375px) {
+    //通用样式
+    html {
+      body {
+        background: #f3f3f3;
+      }
+    }
+    //iphoneX
+    @media (min-height: 668px) {
+      html {
+        body {
+          //background: #cbcccb;
+        }
+      }
+    }
+  }
+  //5.5寸屏幕,适配机型：iphone6+,6s+,7+ > 大于375且小于414px
+  @media (min-width: 376px) and (max-width: 414px) {
+    html {
+      body {
+        //background: #f9f9f9;
+        .body {
+          .search-box {
+            .search-bar {
+
+            }
+          }
+          .main{
+            .top-banner-box {
+              //height: 28rem;
+            }
+            //限时秒杀
+            .miao-box {
+              .container {
+                .goods-ul-4 {
+                  li {
+                    & > div {
+                      &.img-box {
+                        //height: 9.15rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    //华为Mate9
+    @media (min-height: 812px) {
+      html {
+        body {
+          //background: #f9f9f9;
+          .body {
+            .main{
+              .top-banner-box {
+                //height: 28rem;
+              }
+              //限时秒杀
+              .miao-box {
+                .container {
+                  .goods-ul-4 {
+                    li {
+                      & > div {
+                        &.img-box {
+                          //height: 8.625rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
