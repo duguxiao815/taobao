@@ -48,15 +48,16 @@
     line-height: 3.4rem;
   }
   html body .body .search-box header .search-word-list {
+    display: none;
     position: absolute;
     width: 100%;
-    min-height: 51rem;
+    min-height: 4rem;
     top: 5.4rem;
     left: 0;
     background: #fafafa;
   }
   html body .body .search-box header .search-word-list .search-word-ul {
-    padding: 0 .5rem;
+    padding: 0 1rem;
     margin: 0;
   }
   html body .body .search-box header .search-word-list .search-word-ul li {
@@ -74,7 +75,13 @@
   html body .body .search-box header .search-word-list .search-word-ul li.row div {
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
+  }
+  html body .body .search-box header .search-word-list .search-word-ul li.row div.word-title {
+    color: #333;
+  }
+  html body .body .search-box header .search-word-list .search-word-ul li.row div.word-icon {
+    color: #999;
   }
   html body .body .search-box .search-hot,
   html body .body .search-box .search-late {
