@@ -15,21 +15,67 @@
     <div class="body">
       <!--搜索页面-->
 			<div class="search-box">
-        <div class="search-bar">
-          <div class="row">
-            <div class="col-xs-1">
-
-            </div>
-            <div class="col-xs-11">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Go!</button>
-                </span>
+        <header>
+          <div class="search-bar">
+            <div class="row">
+              <div class="col-xs-1 back iconfont icon-back" onclick="location.href='index.html';"></div>
+              <div class="col-xs-11">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="商品搜索">
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">搜索</button>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="search-word-list">
+            <ul class="search-word-ul">
+              <li class="row">
+                <div class="word-title col-xs-11">笔记本电脑</div>
+                <div class="word-icon iconfont icon-fang col-xs-1 text-center"></div>
+              </li>
+              <li class="row">
+                <div class="word-title col-xs-11">笔记本电脑</div>
+                <div class="word-icon iconfont icon-fang col-xs-1 text-center"></div>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- 最近搜索 -->
+        <div class="search-late">
+          <div class="search-del iconfont icon-del"></div>
+          <div class="search-title">最近搜索</div>
+          <ul class="search-ul">
+            <li><a href="#">男鞋跑鞋</a></li>
+            <li><a href="#">体闲男裤水电</a></li>
+            <li><a href="#">商务背包水电费</a></li>
+            <li><a href="#">旅行包收到了开</a></li>
+            <li><a href="#">男鞋跑鞋史蒂</a></li>
+            <li><a href="#">体闲男裤水电</a></li>
+            <li><a href="#">商务背包</a></li>
+            <li><a href="#">旅行包</a></li>
+            <div class="cl"></div>
+          </ul>
         </div>
+
+        <!-- 热门搜索 -->
+        <div class="search-hot">
+          <div class="search-title">热门搜索</div>
+          <ul class="search-ul">
+            <li><a href="#">男鞋跑鞋</a></li>
+            <li><a href="#">体闲男裤水电</a></li>
+            <li><a href="#">商务背包水电费</a></li>
+            <li><a href="#">旅行包收到了开</a></li>
+            <li><a href="#">男鞋跑鞋史蒂</a></li>
+            <li><a href="#">体闲男裤水电</a></li>
+            <li><a href="#">商务背包</a></li>
+            <li><a href="#">旅行包</a></li>
+            <div class="cl"></div>
+          </ul>
+        </div>
+
       </div>
     </div>
   </body>
