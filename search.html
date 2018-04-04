@@ -29,6 +29,7 @@
               </div>
             </div>
           </div>
+          <!-- 待选词列表 -->
           <div class="search-word-list" id="search-word-list">
             <ul class="search-word-ul">
               <li class="row">
@@ -41,40 +42,97 @@
               </li>
             </ul>
           </div>
+          <div class="search-prompt" id="search-prompt">
+            <!-- 最近搜索 -->
+            <div class="search-late" id="search-late">
+              <div class="search-del iconfont icon-del"></div>
+              <div class="search-title">最近搜索</div>
+              <ul class="search-ul">
+                <li><a href="#">男鞋跑鞋</a></li>
+                <li><a href="#">体闲男裤水电</a></li>
+                <li><a href="#">商务背包水电费</a></li>
+                <li><a href="#">旅行包收到了开</a></li>
+                <li><a href="#">男鞋跑鞋史蒂</a></li>
+                <li><a href="#">体闲男裤水电</a></li>
+                <li><a href="#">商务背包</a></li>
+                <li><a href="#">旅行包</a></li>
+                <div class="cl"></div>
+              </ul>
+            </div>
+            <!-- 热门搜索 -->
+            <div class="search-hot" id="search-hot">
+              <div class="search-title">热门搜索</div>
+              <ul class="search-ul">
+                <li><a href="#">男鞋跑鞋</a></li>
+                <li><a href="#">体闲男裤水电</a></li>
+                <li><a href="#">商务背包水电费</a></li>
+                <li><a href="#">旅行包收到了开</a></li>
+                <li><a href="#">男鞋跑鞋史蒂</a></li>
+                <li><a href="#">体闲男裤水电</a></li>
+                <li><a href="#">商务背包</a></li>
+                <li><a href="#">旅行包</a></li>
+                <div class="cl"></div>
+              </ul>
+            </div>
+          </div>
+
         </header>
 
-        <!-- 最近搜索 -->
-        <div class="search-late">
-          <div class="search-del iconfont icon-del"></div>
-          <div class="search-title">最近搜索</div>
-          <ul class="search-ul">
-            <li><a href="#">男鞋跑鞋</a></li>
-            <li><a href="#">体闲男裤水电</a></li>
-            <li><a href="#">商务背包水电费</a></li>
-            <li><a href="#">旅行包收到了开</a></li>
-            <li><a href="#">男鞋跑鞋史蒂</a></li>
-            <li><a href="#">体闲男裤水电</a></li>
-            <li><a href="#">商务背包</a></li>
-            <li><a href="#">旅行包</a></li>
-            <div class="cl"></div>
-          </ul>
+        <!-- 商品列表开始 -->
+        <div class="goods-list">
+          <div class="goods-bar row">
+            <div class="col-xs-9">
+              <div class="row">
+                <div class="col-xs-4">
+                  <span>价格降低</span><span class="iconfont icon-down"></span>
+                </div>
+                <div class="col-xs-3">
+                  销量
+                </div>
+                <div class="col-xs-3">
+                  销量
+                </div>
+                <div class="col-xs-2">
+                  <div class="iconfont icon-browse-mode">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              筛选 <span class="iconfont icon-filter"></span>
+            </div>
+          </div>
+          <div class="goods-ul">
+            <ul class="">
+              <li>
+                <div class="img-box">
+                  <img src="/static/image/img2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <div class="text-tag">
+                    <span>15.6英寸</span>
+                    <span>４G内存</span>
+                  </div>
+                  <div class="text-tag2">
+                    <span>包邮</span>
+                    <span>金币抵2%</span>
+                  </div>
+                  <div class="text-price">
+                    <span>¥</span><span>5188</span>
+                    <span>56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- 热门搜索 -->
-        <div class="search-hot">
-          <div class="search-title">热门搜索</div>
-          <ul class="search-ul">
-            <li><a href="#">男鞋跑鞋</a></li>
-            <li><a href="#">体闲男裤水电</a></li>
-            <li><a href="#">商务背包水电费</a></li>
-            <li><a href="#">旅行包收到了开</a></li>
-            <li><a href="#">男鞋跑鞋史蒂</a></li>
-            <li><a href="#">体闲男裤水电</a></li>
-            <li><a href="#">商务背包</a></li>
-            <li><a href="#">旅行包</a></li>
-            <div class="cl"></div>
-          </ul>
-        </div>
+        <!-- 商品列表结束 -->
 
       </div>
     </div>
@@ -86,15 +144,17 @@
         location.href="/";
       });
       $('#keyword').on('keyup', function(){
-          var listHei = $(window).height()-topHei;
-          $('#search-word-list').height(listHei).show();
+        var listHei = $(window).height()-topHei;
+        $('#search-word-list').height(listHei).show();
+      }).on('click', function(){
+        var listHei = $(window).height()-topHei;
+        $('#search-prompt').height(listHei).show();
+      }).focus();
+      //下拉关键字列表
+      $('#search-word-list li, #sousuo').on('click', function(){
+          location.href='?';
       });
-      $('#search-word-list li').on('click', function(){
-          location.href='goodslist.html';
-      });
-      $('#sousuo').on('click', function(){
-          location.href='goodslist.html';
-      });
+
       //
     });
   </script>

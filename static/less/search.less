@@ -5,11 +5,11 @@
     //阿里图标字体库
     @font-face {
       font-family: 'iconfont';  /* project id 603996 */
-      src: url('//at.alicdn.com/t/font_603996_lcj1ceeuj7qr529.eot');
-      src: url('//at.alicdn.com/t/font_603996_lcj1ceeuj7qr529.eot?#iefix') format('embedded-opentype'),
-      url('//at.alicdn.com/t/font_603996_lcj1ceeuj7qr529.woff') format('woff'),
-      url('//at.alicdn.com/t/font_603996_lcj1ceeuj7qr529.ttf') format('truetype'),
-      url('//at.alicdn.com/t/font_603996_lcj1ceeuj7qr529.svg#iconfont') format('svg');
+      src: url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.eot');
+      src: url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.woff') format('woff'),
+      url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.svg#iconfont') format('svg');
     }
     .iconfont{
       font-family:"iconfont" !important;
@@ -33,13 +33,31 @@
         //删除图标
         .icon-del {
           &::before {
-            content: '\e792';
+            content: '\e6b4';
           }
         }
         //跳转图标
         .icon-fang {
           &::before {
             content: '\e781';
+          }
+        }
+        //浏览模式
+        .icon-browse-mode {
+          &::before {
+            content: '\e682';
+          }
+        }
+        //筛选
+        .icon-filter {
+          &::before {
+            content: '\e69c';
+          }
+        }
+        //下降
+        .icon-down {
+          &::before {
+            content: '\e60e';
           }
         }
 
@@ -71,86 +89,139 @@
 
               }
             }
+            //待选搜索词语列表
             .search-word-list {
               display: none;
               position: absolute;
-              width: 100%;
               min-height: 4rem;
+              width: 100%;
               top: 5.4rem;
               left:0;
+              z-index: 100;
               background: #fafafa;
               .search-word-ul {
                 padding: 0 1rem;
                 margin: 0;
                 li {
-                   padding:0;
-                   margin: 0;
-                   list-style: none;
-                   font-size: 1.4rem;
-                   height: 4rem;
-                   line-height: 4rem;
-                   &.row {
-                     padding: 0;
-                     margin: 0;
-                     div {
-                       padding: 0;
-                       margin: 0;
-                       border-bottom: 1px solid #eee;
-                       &.word-title {
+                  padding:0;
+                  margin: 0;
+                  list-style: none;
+                  font-size: 1.4rem;
+                  height: 4rem;
+                  line-height: 4rem;
+                  &.row {
+                    padding: 0;
+                    margin: 0;
+                    div {
+                      padding: 0;
+                      margin: 0;
+                      border-bottom: 1px solid #eee;
+                      &.word-title {
                          //background: pink;
                         color: #333;
-                       }
-                       &.word-icon {
-                         //background: gray;
-                         color: #999;
-                       }
-                     }
-                   }
-
+                      }
+                      &.word-icon {
+                        //background: gray;
+                        color: #999;
+                      }
+                    }
+                  }
                 }
               }
             }
-          }
-          .search-hot,.search-late {
-            padding: 1rem 1rem 0 1rem;
-            .search-title {
-              font-size: 1.4rem;
-              height: 3rem;
-              line-height: 3rem;
+            .search-prompt {
+              display: none;
+              position: absolute;
+              background: white;
+              width: 100%;
+              top: 5.4rem;
+              left:0;
+              z-index: 10;
+                // 热门搜索,最近搜索
+                .search-hot,.search-late {
+                  padding: 1rem 1rem 0 1rem;
+                  .search-title {
+                    font-size: 1.4rem;
+                    height: 3rem;
+                    line-height: 3rem;
+                  }
+                  .search-del {
+                    width: 3rem;
+                    height: inherit;
+                    background: #ddd;
+                    float: right;
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                    text-align: center;
+                  }
+                  .search-ul {
+                    padding: 0 0 0 0;
+                    margin: 0;
+                    li {
+                      float: left;
+                      height: 3rem;
+                      line-height: 2rem;
+                      list-style: none;
+                      padding: .5rem 1rem;
+                      border-radius: 1.5rem;
+                      background: #f3f3f3;
+                      margin: .5rem .7rem .5rem 0 ;
+                      a {
+                        //height:2rem;
+                        padding: 0;
+                        margin: 0;
+                        line-height: 2rem;
+                        height: 2rem;
+                        font-size: 1.3rem;
+                        color: #333;
+                      }
+                    }
+                  }
+                }
+              }
             }
-            .search-del {
-              width: 3rem;
-              height: inherit;
-              background: #ddd;
-              float: right;
-              font-size: 1.8rem;
-              line-height: 3rem;
-              text-align: center;
-            }
-            .search-ul {
-              padding: 0 0 0 0;
-              margin: 0;
-              li {
-                float: left;
-                height: 3rem;
-                line-height: 2rem;
-                list-style: none;
-                padding: .5rem 1rem;
-                border-radius: 1.5rem;
-                background: #f3f3f3;
-                margin: .5rem .7rem .5rem 0 ;
-                a {
-                  //height:2rem;
+
+            .goods-list {
+              .goods-bar {
+                height: 4rem;
+                line-height: 4rem;
+                border-top: .1rem solid #ddd;
+                border-bottom: .1rem solid #ddd;
+                &.row {
                   padding: 0;
                   margin: 0;
-                  line-height: 2rem;
-                  height: 2rem;
-                  font-size: 1.3rem;
-                  color: #333;
+                  & > div {
+                    height: 3.8rem;
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    &.icon-browse-mode {
+                      font-size: 2rem;
+                      border-right: .1rem solid #ddd;
+                    }
+                    &:last-child {
+                      border-left: .1rem solid #ddd;
+                    }
+                    .row {
+                      padding: 0;
+                      margin: 0;
+                      & > div{
+                        padding: 0;
+                        margin: 0;
+                        height: 2rem;
+                        line-height: 2rem;
+                        margin: .9rem 0;
+                        //background: #f6f6f6;
+                        &:first-child {
+                          border-right: .1rem solid #ddd;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
-          }
 
         }
       }
