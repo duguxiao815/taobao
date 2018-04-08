@@ -185,4 +185,72 @@
   html body .body .search-box .goods-list .goods-bar.row > div .row > div:first-child {
     border-right: .1rem solid #ddd;
   }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li {
+    padding: 0.5rem 1rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div {
+    float: left;
+    background: #f9f9f9;
+    padding: 0;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.img-box {
+    width: 35%;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box {
+    width: 65%;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    height: 4rem;
+    line-height: 2rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-tag {
+    height: 2rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-tag span {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    background: #ddd;
+    padding: 0 .5rem;
+    margin: 0 .5rem 0 0;
+    border-radius: .5rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-tag2 {
+    height: 2rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-tag2 span {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    border: .1rem solid grey;
+    padding: .2rem .5rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-price {
+    height: 2rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type.list li > div.text-box .text-shop {
+    height: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type li div.img-box {
+    background: green;
+    width: 10rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type li div.img-box img {
+    width: 10rem;
+  }
+  html body .body .search-box .goods-list .goods-ul .goods-ul-type li div.text-box {
+    background: pink;
+    width: 19rem;
+  }
 }

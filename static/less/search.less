@@ -221,7 +221,132 @@
                   }
                 }
               }
+              .goods-ul {
+                .goods-ul-type {
+                  padding: 0;
+                  margin: 0;
+                  list-style: none;
+                  &.list {
+                    li {
+                      padding: 0.5rem 1rem;
+                      & > div {
+                        float: left;
+                        background: #f9f9f9;
+                        padding: 0;
+                        &.img-box {
+                          width: 35%;
+                          img {
+
+                          }
+                        }
+                        &.text-box {
+                          width: 65%;
+                          .text-title {
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                            overflow: hidden;
+                            height:4rem;
+                            line-height: 2rem;
+                          }
+                          .text-tag {
+                            height: 2rem;
+                            span {
+                              height: 1.8rem;
+                              line-height: 1.8rem;
+                              font-size: 1.2rem;
+                              background: #ddd;
+                              padding: 0 .5rem;
+                              margin: 0 .5rem 0 0;
+                              border-radius: .5rem;
+                            }
+                          }
+                          .text-tag2 {
+                            height: 2rem;
+                            span {
+                              height: 1.6rem;
+                              line-height: 1.6rem;
+                              font-size: 1.2rem;
+                              border:.1rem solid grey;
+                              padding: .2rem .5rem;
+                            }
+                          }
+                          .text-price {
+                            height: 2rem;
+                            span {
+
+                            }
+                          }
+                          .text-shop {
+                            height: 2rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
+
+        }
+      }
+    }
+  }
+}
+
+//最小屏幕,小于4寸,适配机型：iphone4,4s,5,5s,se > 小于320px
+@media (max-width: 320px) {
+  html {
+    body {
+      .body {
+        .search-box {
+          header {
+            //搜索
+            .search-bar {
+
+            }
+          }
+          .goods-list {
+            .goods-bar{
+
+            }
+            .goods-ul {
+               .goods-ul-type {
+                 li {
+
+                   div {
+                     &.img-box {
+                       background: green;
+                       width: 10rem;
+                       img {
+                          width: 10rem;
+                       }
+                     }
+                     &.text-box {
+                       background: pink;
+                       width: 19rem;
+                       .text-title {
+
+                       }
+                       .text-tag {
+
+                       }
+                       .text-tag2 {
+
+                       }
+                       .text-price {
+
+                       }
+                       .text-shop {
+
+                       }
+                     }
+
+                   }
+                 }
+               }
+            }
+          }
 
         }
       }
