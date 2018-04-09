@@ -227,20 +227,23 @@
                   margin: 0;
                   list-style: none;
                   &.list {
-                    li {
-                      padding: 0.5rem 1rem;
+                    & > li {
+                      padding: 1rem 1rem;
+                      height: 12.7rem;
                       & > div {
                         float: left;
-                        background: #f9f9f9;
+                        //background: #f9f9f9;
                         padding: 0;
+                        margin: 0;
                         &.img-box {
-                          width: 35%;
+                          width: 11.7rem;
+                          margin-right: 1rem;
                           img {
 
                           }
                         }
                         &.text-box {
-                          width: 65%;
+                          width: calc(~'100% - 12.7rem');
                           .text-title {
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
@@ -250,35 +253,59 @@
                             line-height: 2rem;
                           }
                           .text-tag {
+                            padding: .2rem 0;
                             height: 2rem;
-                            span {
-                              height: 1.8rem;
-                              line-height: 1.8rem;
-                              font-size: 1.2rem;
+                            list-style: none;
+                            li {
+                              line-height: 1.4rem;
+                              height: 1.4rem;
+                              float: left;
+                              font-size: 1rem;
                               background: #ddd;
-                              padding: 0 .5rem;
+                              padding: .2rem .5rem;
                               margin: 0 .5rem 0 0;
                               border-radius: .5rem;
                             }
                           }
                           .text-tag2 {
+                            list-style: none;
                             height: 2rem;
-                            span {
-                              height: 1.6rem;
-                              line-height: 1.6rem;
-                              font-size: 1.2rem;
-                              border:.1rem solid grey;
-                              padding: .2rem .5rem;
+                            padding: .2rem 0;
+                            li {
+                              height: 1.4rem;
+                              line-height: 1.4rem;
+                              font-size: 1rem;
+                              border:.1rem solid orange;
+                              padding: .1rem .5rem;
+                              border-radius: .5rem;
+                              float: left;
+                              margin-right: .5rem;
+                              color: orange;
                             }
                           }
                           .text-price {
-                            height: 2rem;
+                            height: 2.2rem;
                             span {
-
+                              color: red;
+                              &.price-dot{
+                                font-size: 1rem;
+                                padding-right: .4rem;
+                              }
+                              &.price-num {
+                                font-size: 1.8rem;
+                                line-height: 2rem;
+                                padding-right: 1rem;
+                              }
+                              &.price-word {
+                                font-size: 1rem;
+                                color: #999;
+                              }
                             }
                           }
                           .text-shop {
-                            height: 2rem;
+                            height: 1.5rem;
+                            font-size: 1rem;
+                            line-height: 1.5rem;
                           }
                         }
                       }
@@ -317,16 +344,16 @@
                    div {
                      &.img-box {
                        background: green;
-                       width: 10rem;
+                       width: 12rem !important;
                        img {
-                          width: 10rem;
+                          width: 13rem;
                        }
                      }
                      &.text-box {
-                       background: pink;
-                       width: 19rem;
+                       //background: pink;
+                       width: 18rem !important;
                        .text-title {
-
+                          font-size: 1.3rem;
                        }
                        .text-tag {
 
@@ -338,7 +365,8 @@
 
                        }
                        .text-shop {
-
+                         height: 1.7rem !important;
+                         line-height: 1.7rem !important;
                        }
                      }
 
