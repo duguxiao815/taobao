@@ -14,7 +14,7 @@
   <body>
     <div class="body">
       <!--搜索页面-->
-			<div class="search-box">
+			<div class="search-box" id="search-box">
         <header id="header">
           <div class="search-bar">
             <div class="row">
@@ -37,7 +37,7 @@
                 <div class="word-icon iconfont icon-fang col-xs-1 text-center"></div>
               </li>
               <li class="row">
-                <div class="word-title col-xs-11">笔记本电脑</div>
+                <div class="word-title col-xs-11">华为笔记本电脑</div>
                 <div class="word-icon iconfont icon-fang col-xs-1 text-center"></div>
               </li>
             </ul>
@@ -63,10 +63,10 @@
             <div class="search-hot" id="search-hot">
               <div class="search-title">热门搜索</div>
               <ul class="search-ul">
-                <li><a href="#">男鞋跑鞋</a></li>
-                <li><a href="#">体闲男裤水电</a></li>
-                <li><a href="#">商务背包水电费</a></li>
-                <li><a href="#">旅行包收到了开</a></li>
+                <li><a href="#">笔记本</a></li>
+                <li><a href="#">轻薄笔记本</a></li>
+                <li><a href="#">华为笔记本电脑</a></li>
+                <li><a href="#">苹果笔记本</a></li>
                 <li><a href="#">男鞋跑鞋史蒂</a></li>
                 <li><a href="#">体闲男裤水电</a></li>
                 <li><a href="#">商务背包</a></li>
@@ -75,20 +75,20 @@
               </ul>
             </div>
           </div>
-
         </header>
 
         <!-- 商品列表开始 -->
         <div class="goods-list">
           <!-- 商品列表栏目条 -->
           <div class="goods-bar row">
-            <div class="col-xs-9">
+            <div class="col-xs-9 goods-bar-left">
               <div class="row">
-                <div class="col-xs-4">
-                  <span>价格降低</span>
+                <div class="col-xs-4" id="array-mode" >
+                  <span id="array-text">价格降低</span>
                   <span class="iconfont icon-down"></span>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">综合</a></li>
+                  <ul class="dropdown-menus" id="dropdown-menu">
+                    <div class="transparent"></div>
+                    <li><a href="#">综合</a><span class="iconfont icon-v"></span></li>
                     <li><a href="#">信用</a></li>
                     <li><a href="#">价格降序</a></li>
                     <li><a href="#">价格升序</a></li>
@@ -106,15 +106,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-3 goods-bar-right">
               筛选 <span class="iconfont icon-filter"></span>
             </div>
           </div>
           <div class="goods-ul">
             <ul class="goods-ul-type list">
+              <div class="mask-box" id="goods-ul-mask-box"></div>
               <li>
                 <div class="img-box">
-                  <img src="/static/image/img2.jpg" alt="" class="img-responsive">
+                  <img src="/uploads/goods1.jpg" alt="" class="img-responsive">
                 </div>
                 <div class="text-box">
                   <div class="text-title">
@@ -140,7 +141,7 @@
 
               <li>
                 <div class="img-box">
-                  <img src="/static/image/img2.jpg" alt="" class="img-responsive">
+                  <img src="/uploads/goods2.jpg" alt="" class="img-responsive">
                 </div>
                 <div class="text-box">
                   <div class="text-title">
@@ -163,11 +164,191 @@
                   </div>
                 </div>
               </li>
-              <li>
 
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <ul class="text-tag">
+                    <li>15.6英寸</li>
+                    <li>４G内存</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
               </li>
-              <div class="cl"></div>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods4.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <ul class="text-tag">
+                    <li>15.6英寸</li>
+                    <li>４G内存</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">5188</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods5.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <ul class="text-tag">
+                    <li>15.6英寸</li>
+                    <li>４G内存</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">5188</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods6.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <ul class="text-tag">
+                    <li>15.6英寸</li>
+                    <li>４G内存</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">5188</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods7.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    Huawei/华为 MateBook D 2018款八代i5 MX150独显轻薄笔记本电脑
+                  </div>
+                  <ul class="text-tag">
+                    <li>15.6英寸</li>
+                    <li>４G内存</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">5188</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods8.png" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    华为 (HUAWEI) MateBook Xpro 13.9英寸超轻薄3K触屏全面屏笔记本 深空灰 / i7|16G|512GB / 独显
+                  </div>
+                  <ul class="text-tag">
+                    <li>i７低功耗版</li>
+                    <li>512G固态</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">12988</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-box">
+                  <img src="/uploads/goods10.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="text-box">
+                  <div class="text-title">
+                    华为 HUAWEI P20 Pro 全面屏徕卡三摄 6GB +128GB 极光色 全网通版 移动联通电信4G手机 双卡双待
+                  </div>
+                  <ul class="text-tag">
+                    <li>6GB</li>
+                    <li>128GB</li>
+                    <li>６.1英寸</li>
+                  </ul>
+                  <ul class="text-tag2">
+                    <li>包邮</li>
+                    <li>金币抵2%</li>
+                  </ul>
+                  <div class="text-price">
+                    <span class="price-dot">¥</span><span class="price-num">5788</span>
+                    <span class="price-word">56人付款</span>
+                  </div>
+                  <div class="text-shop">
+                    茂双数码专营店
+                  </div>
+                </div>
+              </li>
+
             </ul>
+            <button class="btn-loading btn">加载更多...</button>
           </div>
         </div>
         <!-- 商品列表结束 -->
@@ -177,21 +358,46 @@
   </body>
   <script>
     $(function(){
-      var topHei = $('#header').height();
+      //顶部搜索条高度
+      var height = $(window).height();
+      var top_height = $('#header').height() + 20;
+      var main_height = height - top_height;
+      //alert(topHei);
       $('#icon-back').on('click', function(){
         location.href="/";
       });
-      $('#keyword').on('keyup', function(){
-        var listHei = $(window).height()-topHei;
-        $('#search-word-list').height(listHei).show();
-      }).on('click', function(){
-        var listHei = $(window).height()-topHei;
-        $('#search-prompt').height(listHei).show();
+      //键盘事件
+      $('#keyword').on('keyup', function(){    //输入事件
+        $('#search-word-list').height(main_height).show();
+        $('#search-prompt').hide();
+      }).on('click', function(){　　  //点击事件
+        main_height = height - top_height;
+        $('#search-prompt').height(main_height).show();
+        //禁止页面滚动
+        $('.body').addClass('navbar-fixed-top');
       }).focus();
       //下拉关键字列表
       $('#search-word-list li, #sousuo').on('click', function(){
           //跳转产品搜索页面
           location.href='?';
+      });
+      //排序展示
+      $('#array-mode').on('click', function(){
+        $('#dropdown-menu').show();
+        $('#goods-ul-mask-box').height(height).fadeIn();
+        $('.body').addClass('navbar-fixed-top');
+      });
+      //收起排序
+      $('#dropdown-menu li').on('click', function(event){
+        $('#dropdown-menu').hide();
+        $('#goods-ul-mask-box').fadeOut();
+        $('.body').removeClass('navbar-fixed-top');
+        $('#array-text').text('综合');
+        event.stopPropagation();
+      });
+
+      $(window).resize(function(){
+        height = $(window).height();
       });
 
       //

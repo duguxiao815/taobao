@@ -1,0 +1,178 @@
+@media screen {
+  html {
+    font-size: 10px;
+  }
+  @font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot');
+    src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.woff') format('woff'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.svg#iconfont') format('svg');
+    
+    /* project id 603996 */
+  }
+  html .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html body {
+    background: #eee;
+  }
+  html body .icon-phone::before {
+    content: '\e633';
+  }
+  html body .body header {
+    height: 9rem;
+    margin: 4rem 0 0 0;
+  }
+  html body .body header .face-box {
+    width: 9rem;
+    height: 9rem;
+    margin: 0rem auto;
+  }
+  html body .body header .face-box img {
+    width: 9rem;
+    height: 9rem;
+  }
+  html body .body header.register-header {
+    height: 5rem;
+    margin: 0;
+  }
+  html body .body header.register-header h3 {
+    padding-top: 1rem;
+    font-size: 2rem;
+    height: 4rem;
+    line-height: 4rem;
+    color: red;
+    text-align: center;
+  }
+  html body .body form {
+    width: 90%;
+    margin: 1.5rem auto;
+    border: .1rem solid #ddd;
+    padding: 1.5rem 1.5rem;
+    background: white;
+  }
+  html body .body form .form-group {
+    position: relative;
+  }
+  html body .body form .form-group span.username-dot,
+  html body .body form .form-group span.password-dot {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #aaa;
+  }
+  html body .body form .form-group span.iconfont {
+    top: .6rem;
+    left: .8rem;
+    font-size: 1.8rem;
+  }
+  html body .body form .form-group .form-control {
+    padding-left: 3rem ;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    font-size: 1.4rem;
+  }
+  html body .body form .input-group {
+    height: 3.4rem;
+    margin: 1.5rem 0 0rem 0;
+    padding: 0 0 0 0;
+  }
+  html body .body form .input-group input {
+    height: 3.4rem;
+  }
+  html body .body form .input-group span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+  }
+  html body .body form .input-group span.input-group-btn button {
+    height: 3.4rem;
+  }
+  html body .body .btn-box {
+    width: 90%;
+    margin: .5rem auto;
+  }
+  html body .body .link-box {
+    width: 90%;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  html body .body .link-box div:first-child {
+    text-align: left;
+    padding-left: 0;
+  }
+  html body .body .link-box div:last-child {
+    text-align: right;
+    padding-right: 0;
+  }
+  html body .body .link-box a {
+    font-size: 1.5rem;
+  }
+  html body .body .link-box a.link-red {
+    color: #ff0000;
+  }
+  html body .body .link-box a.link {
+    color: #666;
+  }
+}
+@media (max-width: 320px) {
+  html body .body header {
+    height: 6.4rem;
+    background: #eee;
+  }
+  html body .body header .face-box {
+    width: 6.4rem;
+    height: 6.4rem;
+    margin: 1rem auto;
+  }
+  html body .body header .face-box img {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+  html body .body header.register-header {
+    height: 3rem;
+    margin: 0;
+  }
+  html body .body header.register-header h3 {
+    padding-top: .8rem;
+    font-size: 2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    color: orange;
+    text-align: center;
+  }
+  html body .body .btn-box div a {
+    font-size: 1.4rem;
+  }
+  html body .body .link-box {
+    height: 2rem;
+    line-height: 2rem;
+    margin: 1rem auto;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  html body .body form div.input-group input.form-control {
+    width: 16rem ;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) and (min-height: 668px) {
+  html body .body header {
+    margin: 7rem 0 0 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  html body .body header {
+    margin: 8rem 0 0 0;
+  }
+  html body .body .link-box div a {
+    font-size: 1.6rem;
+  }
+}

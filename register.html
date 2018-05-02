@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>新用户注册</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/login.css">
+		<!--基本库-->
+		<script src="/static/js/jquery-3.3.1.min.js"></script>
+		<script src="/static/js/bootstrap-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="body">
+      <header class="register-header">
+        <h3>新用户注册</h3>
+      </header>
+      <form>
+
+        <div class="form-group">
+          <span class="glyphicon glyphicon-user username-dot"></span>
+          <input class="form-control required" type="text" placeholder="用户名/邮箱" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+        </div>
+        <div class="form-group">
+          <span class="glyphicon glyphicon-lock password-dot"></span>
+          <input class="form-control required" type="password" placeholder="请输入密码" id="password" name="password" autofocus="autofocus" maxlength="20"/>
+        </div>
+        <div class="form-group">
+          <span class="glyphicon glyphicon-lock password-dot"></span>
+          <input class="form-control required" type="password" placeholder="确认密码" id="repass" name="repass" autofocus="autofocus" maxlength="20"/>
+        </div>
+        <div class="form-group">
+          <span class="iconfont icon-phone password-dot"></span>
+          <input class="form-control required" type="tel" placeholder="手机号码" id="phone" name="phone" autofocus="autofocus" maxlength="20"/>
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" id="verification" placeholder="手机验证码">
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button" id="btn_verification">发送验证码</button>
+          </span>
+        </div>
+
+      </form>
+
+      <div class="btn-box">
+        <button type="button" class="btn btn-danger btn-lg btn-block" name="submit" id="btn-submit">注　册</button>
+      </div>
+      <div class="link-box row">
+        <div class="col-xs-6">
+          <a class="link" href="login.html">老用户登录</a>
+        </div>
+        <div class="col-xs-6">
+          <a class="link-red" href=".html"></a>
+        </div>
+      </div>
+
+    </div>
+  </body>
+<script type="text/javascript">
+  var user = $('#username');
+  var ver = $('#verification');
+  var wid = user.width() + 44;
+
+  $(function() {
+    resize();
+  });
+  //改变窗口大小
+  $(window).resize(function(){
+    resize();
+  });
+  var resize = function() {
+    btn = $('#btn_verification');
+    btn.on('click', function(){
+      btn.text('60秒后重发');
+    });
+    ver.width(wid - 120);
+  };
+</script>
+</html>

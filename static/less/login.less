@@ -1,0 +1,322 @@
+@media screen {
+  html {
+    font-size: 10px;
+
+    //阿里图标字体库
+    @font-face {
+      font-family: 'iconfont';  /* project id 603996 */
+      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot');
+      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.woff') format('woff'),
+      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.svg#iconfont') format('svg');
+    }
+    .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: #eee;
+
+      //秒杀-闪电
+      .icon-phone {
+        &::before {
+          content: '\e633';
+        }
+      }
+
+      .body{
+        header {
+          height: 9rem;
+          margin: 4rem 0 0 0;
+          .face-box {
+            width: 9rem;
+            height: 9rem;
+            margin: 0rem auto;
+            img {
+              width: 9rem;
+              height:9rem;
+            }
+          }
+          //　注册页面标题
+          &.register-header {
+            height: 5rem;
+            margin: 0;
+            h3 {
+              padding-top: 1rem;
+              font-size: 2rem;
+              height: 4rem;
+              line-height: 4rem;
+              color: red;
+              text-align: center;
+            }
+          }
+        }
+        form {
+          width: 90%;
+          margin: 1.5rem auto;
+          border: .1rem solid #ddd;
+          padding: 1.5rem 1.5rem;
+          background: white;
+          .form-group {
+            position: relative;
+            span {
+              &.username-dot, &.password-dot {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                color: #aaa;
+              }
+              &.iconfont {
+                top: .6rem;
+                left: .8rem;
+                font-size: 1.8rem;
+              }
+            }
+            .form-control{
+              padding-left: 3rem ;
+              height: 3.4rem;
+              line-height: 3.4rem;
+              font-size: 1.4rem;
+            }
+          }
+          .input-group {
+            height: 3.4rem;
+            margin: 1.5rem 0 0rem 0;
+            padding: 0 0 0 0;
+            input {
+              height: 3.4rem;
+            }
+            span {
+              position: absolute;
+              right: 0;
+              top: 0;
+              padding: 0;
+              margin: 0;
+              &.input-group-btn {
+                button {
+                  height: 3.4rem;
+                }
+              }
+            }
+          }
+        }
+        .btn-box {
+          width: 90%;
+          margin:.5rem auto;
+        }
+        .link-box {
+          width: 90%;
+          height: 3rem;
+          line-height: 3rem;
+          margin: 2rem auto;
+          text-align: center;
+          div{
+            &:first-child {
+              text-align: left;
+              padding-left: 0;
+            }
+            &:last-child {
+              text-align: right;
+              padding-right: 0;
+            }
+          }
+          a {
+            font-size: 1.5rem;
+            &.link-red {
+              color: red
+            }
+            &.link {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//最小屏幕,小于4寸,适配机型：iphone4,4s,5,5s,se > 小于320px
+@media (max-width: 320px) {
+  html {
+    body {
+      .body {
+        header {
+          height: 6.4rem;
+          background: #eee;
+          .face-box {
+            width: 6.4rem;
+            height: 6.4rem;
+            margin: 1rem auto;
+            img {
+              width: 6.4rem;
+              height: 6.4rem;
+            }
+          }
+          //　注册页面标题
+          &.register-header {
+            height: 3rem;
+            margin: 0;
+            h3 {
+              padding-top: .8rem;
+              font-size: 2rem;
+              height: 2.2rem;
+              line-height: 2.2rem;
+              color: orange;
+              text-align: center;
+            }
+          }
+        }
+        form {
+
+        }
+        .btn-box {
+          div{
+            a {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .link-box {
+          height: 2rem;
+          line-height: 2rem;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
+
+//4.7寸屏幕,适配机型：iphone6,6s,7,8,X > 大于320且小于375px
+@media (min-width: 321px) and (max-width: 375px) {
+  html {
+    body {
+      .body {
+        header {
+        }
+        .link-box {
+        }
+        form {
+          div {
+            &.input-group {
+              input {
+                &.form-control {
+                  width: 16rem ;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //Ｃ１青葱手机
+  @media (min-width: 321px) and (max-width: 360px) {
+    html {
+      body {
+        .body {
+          form {
+            div {
+              &.input-group {
+                input {
+                  &.form-control {
+                    // width: 19.8rem !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //
+  @media (min-width: 361px) and (max-width: 375px) {
+    html {
+      body {
+        .body {
+          form {
+            div {
+              &.input-group {
+                input {
+                  &.form-control {
+                    // width: 17rem !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //iphoneX
+  @media (min-height: 668px) {
+    html {
+      body {
+        //background: #cbcccb;
+        .body {
+          header {
+            margin: 7rem 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//5.5寸屏幕,适配机型：iphone6+,6s+,7+ > 大于375且小于414px
+@media (min-width: 376px) and (max-width: 414px) {
+  html {
+    body {
+      .body {
+        header {
+          margin: 8rem 0 0 0;
+        }
+        .link-box {
+          div {
+            a {
+              font-size: 1.6rem;
+            }
+          }
+        }
+        form {
+          div {
+            &.input-group {
+              input {
+                &.form-control {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //华为Mate9
+  @media (min-width: 376px) and (max-width: 393px) {
+    html {
+      body {
+        .body {
+          header {
+
+          }
+          form {
+            div {
+              &.input-group {
+                input {
+                  //width: 22.8rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

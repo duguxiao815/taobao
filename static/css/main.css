@@ -4,8 +4,8 @@
   }
   @font-face {
     font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.eot');
-    src: url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.woff') format('woff'), url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_sg93f7lh4y47k3xr.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot');
+    src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.woff') format('woff'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.svg#iconfont') format('svg');
     
     /* project id 603996 */
   }
@@ -19,6 +19,22 @@
   }
   html body {
     background: #eeeeee;
+  }
+  html body a {
+    color: #333333;
+    text-decoration: none;
+  }
+  html body a:link {
+    color: #333333;
+  }
+  html body a:active {
+    color: #333333;
+  }
+  html body a:visited {
+    color: #333333;
+  }
+  html body a:hover {
+    color: #333333;
   }
   html body ul,
   html body li {
@@ -308,6 +324,14 @@
     font-size: 1.2rem;
     text-align: left !important;
   }
+  html body .body .main .jing-box .container .goods-ul-3 li .img-text div {
+    height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
   html body .body .main .jing-box .container .goods-ul-3 li .img-text .red {
     color: red;
     line-height: 1.2rem;
@@ -332,6 +356,9 @@
   html body .body .main .guess-box .container .goods-ul-2 li div {
     margin: 0 .5rem;
   }
+  html body .body .main .guess-box .container .goods-ul-2 li div.img-box {
+    min-height: 8rem;
+  }
   html body .body .main .guess-box .container .goods-ul-2 li div.img-box img {
     width: 100%;
   }
@@ -341,6 +368,14 @@
     line-height: 2rem ;
     font-size: 1.4rem;
     text-align: left;
+  }
+  html body .body .main .guess-box .container .goods-ul-2 li div.img-text div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 4rem;
   }
   html body .body .main .guess-box .container .goods-ul-2 li div.img-text .red {
     color: red;
