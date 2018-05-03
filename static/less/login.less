@@ -5,31 +5,150 @@
     //阿里图标字体库
     @font-face {
       font-family: 'iconfont';  /* project id 603996 */
-      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot');
-      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot?#iefix') format('embedded-opentype'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.woff') format('woff'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.ttf') format('truetype'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.svg#iconfont') format('svg');
+      src: url('//at.alicdn.com/t/font_603996_bm7i07k158iod2t9.eot');
+      src: url('//at.alicdn.com/t/font_603996_bm7i07k158iod2t9.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_603996_bm7i07k158iod2t9.woff') format('woff'),
+      url('//at.alicdn.com/t/font_603996_bm7i07k158iod2t9.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_603996_bm7i07k158iod2t9.svg#iconfont') format('svg');
     }
     .iconfont{
       font-family:"iconfont" !important;
-      font-size:16px;font-style:normal;
+      font-size: 1.6rem;
+      font-style:normal;
       -webkit-font-smoothing: antialiased;
       -webkit-text-stroke-width: 0.2px;
       -moz-osx-font-smoothing: grayscale;
     }
 
+    //背景颜色
+    .bg(@color: white){
+      background-color: @color !important;
+    }
+    .bg-white {
+      .bg;
+    }
+    .mask-box {
+      background: rgba(0,0,0,.5);
+      position: absolute;
+    }
+    .mask-load-box {
+      background: rgba(50,50,50,.8);
+      height: 4rem;
+      width: 4rem;
+      position: absolute;
+      display: none;
+      z-index: 9999;
+      border-radius: 1rem;
+      border: .1rem solid #333;
+    }
+
+    @-webkit-keyframes load2{
+        0%{ filter: opacity(0.1); transform:scale(0.3);}
+        30%{ filter: opacity(0.3); transform:scale(0.5);}
+        60%{ filter: opacity(0.6); transform:scale(0.8);}
+        90%{ filter: opacity(1); transform:scale(1);}
+        100%{ filter: opacity(0.6); transform:scale(0.8);}
+    }
+    .loadding-2{
+        //background: #fff;
+        align-content: center;
+        top: 1.6rem;
+        left: 1.6rem;
+        position: absolute;
+    }
+    .loadding-2 i{
+        width: 6px;
+        height: 6px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        background: #999;
+        filter: opacity(0.4);
+        transform:scale(0.6);
+    }
+    .loadding-2 i:nth-child(1){
+        top: -10px;
+        left: 0;
+        -webkit-animation: load2 .8s ease-in .1s infinite;
+    }
+    .loadding-2 i:nth-child(2){
+        top: -7px;
+        left: -7px;
+        -webkit-animation: load2 .8s ease-in .2s infinite;
+    }
+    .loadding-2 i:nth-child(3){
+        top: 0px;
+        left: -10px;
+        -webkit-animation: load2 .8s ease-in .3s infinite;
+    }
+    .loadding-2 i:nth-child(4){
+        top: 7px;
+        left: -7px;
+        -webkit-animation: load2 .8s ease-in .4s infinite;
+    }
+    .loadding-2 i:nth-child(5){
+        top: 10px;
+        left: 0px;
+        -webkit-animation: load2 .8s ease-in .5s infinite;
+    }
+    .loadding-2 i:nth-child(6){
+        top: 7px;
+        left: 7px;
+        -webkit-animation: load2 .8s ease-in .6s infinite;
+    }
+    .loadding-2 i:nth-child(7){
+        top: 0px;
+        left: 10px;
+        -webkit-animation: load2 .8s ease-in .7s infinite;
+    }
+    .loadding-2 i:nth-child(8){
+        top: -7px;
+        left: 7px;
+        -webkit-animation: load2 .8s ease-in .8s infinite;
+    }
+    .loadding-2 {
+      i {
+        width: 6px;
+        height: 6px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        background: #999;
+        filter: opacity(0.4);
+        transform:scale(0.6);
+        &:nth-child(1){
+
+        }
+        &:nth-child(2) {
+
+        }
+      }
+    }
+
     body {
       background: #eee;
-
       //秒杀-闪电
       .icon-phone {
         &::before {
           content: '\e633';
         }
       }
+      //返回图标
+      .icon-back {
+        &::before {
+          content: '\e624';
+        }
+      }
 
       .body{
+        //position: relative;
+        .mask-box {
+          width: 100%;
+          height: 100%;
+          z-index: 200;
+          display: none;
+          top: 0;
+        }
         header {
           height: 9rem;
           margin: 4rem 0 0 0;
@@ -56,14 +175,55 @@
             }
           }
         }
+        //顶部导航条
+        nav {
+          &.topbar{
+           background: #f3f3f3;
+           height: 4.4rem !important;
+           padding: 1rem 1rem 1rem .5rem !important;
+           z-index: 10;
+           &.btm-line{
+             border-bottom: .1rem solid #eee;
+           }
+           //margin: 0 !important;
+           .row {
+             //padding: 0 !important;
+             margin: 0 ;
+             height: 2.8rem;
+             line-height: 2.6rem !important;
+             div {
+               padding: 0 ;
+               &.col-xs-1 {
+                 font-size: 2rem !important;
+                 //text-align: right;
+               }
+               &.col-xs-10 {
+                font-size: 1.6rem !important;
+                text-align: center;
+               }
+             }
+           }
+         }
+        }
+        .has-nav {
+          margin-top: 6rem;
+        }
         form {
           width: 90%;
           margin: 1.5rem auto;
           border: .1rem solid #ddd;
           padding: 1.5rem 1.5rem;
           background: white;
+          h2{
+            font-size: 1.6rem;
+            margin: 0 0 1.5rem 0;
+          }
           .form-group {
             position: relative;
+            label {
+              font-size: 1.4rem;
+              font-weight: 100;
+            }
             span {
               &.username-dot, &.password-dot {
                 position: absolute;
@@ -90,6 +250,7 @@
             padding: 0 0 0 0;
             input {
               height: 3.4rem;
+              font-size: 1.6rem !important;
             }
             span {
               position: absolute;
@@ -98,6 +259,11 @@
               padding: 0;
               margin: 0;
               &.input-group-btn {
+                img {
+                  height: 3.4rem !important;
+                  width: 12rem !important;
+                  border-radius: 0 .4rem .4rem 0;
+                }
                 button {
                   height: 3.4rem;
                 }

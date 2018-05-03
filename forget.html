@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>忘记密码</title>
+    <title>密码找回</title>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/static/css/login.css">
 		<!--基本库-->
@@ -12,49 +12,54 @@
   </head>
   <body>
     <div class="body">
-      <header id="header">
-        <div class="face-box">
-          <img src="/static/image/face.png" alt="" class="img-responsive">
+      <nav class="topbar btm-line navbar-fixed-top bg-white">
+        <div class="row">
+          <div class="col-xs-1 back iconfont icon-back" id="icon-back"></div>
+          <div class="col-xs-10">密码找回</div>
+          <div class="col-xs-1" id="icon-back"></div>
         </div>
-      </header>
-      <form>
+      </nav>
+      <form class="has-nav">
+        <h2 class="page-header">１．请输入您要找回的账号</h2>
         <div class="form-group">
           <span class="glyphicon glyphicon-user username-dot"></span>
           <input class="form-control required" type="text" placeholder="请输入账号" id="username" name="username" autofocus="autofocus" maxlength="20"/>
         </div>
-        <div class="form-group">
-          <span class="glyphicon glyphicon-lock password-dot"></span>
-          <input class="form-control required" type="text" placeholder="请输入密码" id="password" name="password" autofocus="autofocus" maxlength="20"/>
+        <div class="input-group">
+          <input type="text" class="form-control" id="verification">
+          <span class="input-group-btn">
+            <img src="/static/image/verification.png" alt="" class="responsive">
+          </span>
         </div>
       </form>
-
       <div class="btn-box">
-        <button type="button" class="btn btn-danger btn-lg btn-block" name="submit" id="btn-submit">登 录</button>
+        <button type="button" class="btn btn-danger btn-lg btn-block" name="submit" id="btn-submit">下一步</button>
       </div>
-      <div class="link-box row">
-        <div class="col-xs-6">
-          <a class="link" href="forget.html">忘记密码</a>
-        </div>
-        <div class="col-xs-6">
-          <a class="link-red" href="register.html">注册新用户</a>
-        </div>
-      </div>
+      <section class="">
+
+      </section>
 
     </div>
   </body>
 <script type="text/javascript">
-
+  var user = $('#username');
+  var ver = $('#verification');
+  var wid = user.width();
   $(function(){
     resize();
+    $('#icon-back').on('click',function(){
+      location.href='login.html';
+    });
   });
   //改变窗口大小
   $(window).resize(function(){
     resize();
   });
   var resize = function() {
+    ver.width(wid - 120);
     var h =  window.innerHeight;
     $('#btn-submit').on('click', function(){
-      location.href = 'member.html';
+      location.href = 'forget2.html';
     });
   };
 </script>
