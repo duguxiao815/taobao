@@ -58,13 +58,13 @@
   }
   html .loadding-2 {
     align-content: center;
-    top: 1.6rem;
-    left: 1.6rem;
+    top: 1.7rem;
+    left: 1.7rem;
     position: absolute;
   }
   html .loadding-2 i {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     display: block;
     position: absolute;
     border-radius: 50%;
@@ -102,7 +102,7 @@
     left: 7px;
     -webkit-animation: load2 0.8s ease-in 0.6s infinite;
   }
-  html .loadding-2 i:nth-child(7) {
+  html .loadding-2 i::nth-child(7) {
     top: 0px;
     left: 10px;
     -webkit-animation: load2 0.8s ease-in 0.7s infinite;
@@ -111,16 +111,6 @@
     top: -7px;
     left: 7px;
     -webkit-animation: load2 0.8s ease-in 0.8s infinite;
-  }
-  html .loadding-2 i {
-    width: 6px;
-    height: 6px;
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background: #999;
-    filter: opacity(0.4);
-    transform: scale(0.6);
   }
   html body {
     background: #eee;
