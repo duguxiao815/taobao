@@ -1,89 +1,14 @@
 // "out": "../css/main.css", "compress": true
+@import "common.less";
+
 @media screen {
   html {
-    font-size: 10px;
-
-    //阿里图标字体库
-    @font-face {
-      font-family: 'iconfont';  /* project id 603996 */
-      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot');
-      src: url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.eot?#iefix') format('embedded-opentype'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.woff') format('woff'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.ttf') format('truetype'),
-      url('//at.alicdn.com/t/font_603996_u33hfhu7b4jthuxr.svg#iconfont') format('svg');
-    }
-
-    .iconfont{
-      font-family:"iconfont" !important;
-      font-size:16px;font-style:normal;
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-stroke-width: 0.2px;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
     body {
       background: #eeeeee;
-      a{
-        color: #333333;
-        text-decoration: none;
-        &:link{
-          color: #333333;
-        }
-        &:active {
-          color: #333333;
-        }
-        &:visited {
-          color: #333333;
-        }
-        &:hover{
-          color: #333333;
-        }
-      }
-      ul,li {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
       .cl {
         clear: both;
       }
-      //图标字体
-      //秒杀-闪电
-      .icon-miao {
-        &::before {
-          content: '\e6b9';
-        }
-      }
-      //心
-      .icon-heart {
-        &::before {
-          content: '\e641';
-        }
-      }
-      //APP应用
-      .icon-app {
-        &::before {
-          content: '\e652';
-        }
-      }
-      //手机
-      .icon-mobile {
-        &::before {
-          content: '\e637';
-        }
-      }
-      //PC端Web版
-      .icon-web {
-        &::before {
-          content: '\e640';
-        }
-      }
-      .row {
-        & > div, & > li {
-          padding: 0;
-          margin: 0;
-        }
-      }
+
       //统一区块样式
       .ibox {
         background: white;

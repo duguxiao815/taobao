@@ -290,3 +290,156 @@ html body .body form .input-group span.input-group-btn img {
 html body .body form .input-group span.input-group-btn button {
   height: 3.4rem;
 }
+@media screen {
+  html body {
+    background: #eee;
+  }
+  html body .body header {
+    background: #fc5c04;
+  }
+  html body .body header > .row {
+    height: 10rem;
+    margin: 0 1rem;
+  }
+  html body .body header > .row > div {
+    height: inherit;
+    height: 6rem;
+    margin: 2rem 0;
+  }
+  html body .body header > .row > div.left .headface {
+    margin: 0 auto;
+    width: 6rem;
+    border-radius: 50%;
+    background: #fff;
+  }
+  html body .body header > .row > div.right div.next {
+    font-size: 2.8rem;
+    color: white;
+    float: right;
+    line-height: 6rem;
+  }
+  html body .body header > .row > div.right div.title-lable {
+    float: left;
+    margin: .5rem ;
+  }
+  html body .body header > .row > div.right div.title-lable div {
+    color: white;
+  }
+  html body .body header > .row > div.right div.title-lable div:first-child {
+    font-size: 1.8rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+  html body .body header > .row > div.right div.title-lable div:last-child {
+    line-height: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+  }
+  html body .body header div.second-header {
+    height: 5rem;
+    background: rgba(220, 220, 220, 0.15);
+    padding: .5rem 0;
+  }
+  html body .body header div.second-header .row {
+    margin: 0;
+  }
+  html body .body header div.second-header .row div {
+    padding: .2rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+  html body .body header div.second-header .row div:last-child {
+    border-right: 0;
+  }
+  html body .body header div.second-header .row div div {
+    font-size: 1.3rem;
+    height: 1.8rem;
+    border: 0;
+  }
+  html body .body section {
+    margin: .6rem 0;
+    background: white;
+    border-top: .1rem solid #ddd;
+    border-bottom: .1rem solid #ddd;
+  }
+  html body .body section div.item-header {
+    padding: .5rem 1rem;
+    height: 4rem;
+    border-bottom: .1rem solid #ddd;
+  }
+  html body .body section div.item-header div {
+    padding: 0;
+    height: 3rem;
+    line-height: 3rem;
+  }
+  html body .body section div.item-header div.item-title {
+    font-size: 1.6rem;
+  }
+  html body .body section div.item-header div.item-text {
+    float: right;
+    font-size: 1.rem;
+  }
+  html body .body section div.item-header div.item-text span.iconfont {
+    font-size: 1.4rem;
+  }
+  html body .body section div.item-row {
+    height: 6rem;
+  }
+  html body .body section div.item-row div {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+  html body .body section div.item-row div .iconfont {
+    color: #666;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    margin: .4rem auto;
+  }
+  html body .body section ul li {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    padding: 0  1.2rem;
+    border-bottom: .1rem solid #e6e6e6;
+  }
+  html body .body section ul li span {
+    float: right;
+    font-size: 1.4rem;
+    color: #666;
+  }
+  html body .body section ul li:last-child {
+    border-bottom: 0;
+  }
+}
+@media (max-width: 320px) {
+  html body .body header > .row {
+    height: 8rem;
+  }
+  html body .body header > .row > div {
+    height: 5rem;
+    margin: 1.5rem 0;
+  }
+  html body .body header > .row > div.left .headface {
+    width: 5rem;
+  }
+  html body .body header > .row > div.right div.next {
+    font-size: 2.4rem;
+    line-height: 5rem;
+  }
+  html body .body header > .row > div.right div.title-lable div:first-child {
+    font-size: 1.8rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+  }
+  html body .body header > .row > div.right div.title-lable div:last-child {
+    line-height: 1.4rem;
+    height: 1.4rem;
+    font-size: 1.4rem;
+  }
+}

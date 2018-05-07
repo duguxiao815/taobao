@@ -1,0 +1,368 @@
+html{
+  //阿里图标字体库
+  @font-face {
+    font-family: 'iconfont';  /* project id 603996 */
+    src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot');
+    src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.svg#iconfont') format('svg');
+  }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:1.6rem;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  font-size: 10px;
+  body {
+    //扩展栅格系统
+    /* define bootstrap 5 columns */
+		.col-xs-5,
+		.col-sm-5,
+		.col-md-5,
+		.col-lg-5 {
+			position: relative;
+			min-height: 1px;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+    .col-xs-5 {
+			width: 20%;
+			float: left;
+		}
+
+    //超链接样式
+    a{
+      color: #333333;
+      text-decoration: none;
+      &:link{
+        color: #333333;
+      }
+      &:active {
+        color: #333333;
+      }
+      &:visited {
+        color: #333333;
+      }
+    }
+
+    .cl {
+      clear: both;
+    }
+
+    .scroll-lock{
+      overflow: hidden;
+      height: 100%
+      width:  100%;
+    }
+
+    //公用方法
+    .nopadding{
+      padding: 0;
+    }
+    .nomargin{
+      margin: 0;
+    }
+    .nowarp{
+      .nopadding;
+      .nomargin;
+    }
+    ul,li,.ul {
+      .nowarp;
+      list-style: none;
+    }
+    .transparent(@height: 1rem) {
+      height: @height;
+      background: none;
+    }
+
+    //背景颜色
+    .bg(@color: white){
+      background-color: @color !important;
+    }
+    .bg-white {
+      .bg;
+    }
+
+    //返回图标
+    .icon-back {
+      &::before {
+        content: '\e617';
+      }
+    }
+    //删除图标
+    .icon-del {
+      &::before {
+        content: '\e6b4';
+      }
+    }
+    //跳转图标
+    .icon-fang {
+      &::before {
+        content: '\e781';
+      }
+    }
+    //浏览模式
+    .icon-browse-mode {
+      &::before {
+        content: '\e682';
+      }
+    }
+    //筛选
+    .icon-filter {
+      &::before {
+        content: '\e69c';
+      }
+    }
+    //下降
+    .icon-down {
+      &::before {
+        content: '\e60e';
+      }
+    }
+    //对勾
+    .icon-v {
+      &::before {
+        content: '\e730';
+      }
+    }
+    //手机
+    .icon-phone {
+      &::before {
+        content: '\e633';
+      }
+    }
+    //心
+    .icon-heart {
+      &::before {
+        content: '\e641';
+      }
+    }
+    //APP应用
+    .icon-app {
+      &::before {
+        content: '\e652';
+      }
+    }
+    //手机
+    .icon-mobile {
+      &::before {
+        content: '\e637';
+      }
+    }
+    //PC端Web版
+    .icon-web {
+      &::before {
+        content: '\e640';
+      }
+    }
+    //下一级
+    .icon-next {
+      &::before {
+        content: '\e636';
+      }
+    }
+    //未付款
+    .icon-nopay {
+      &::before {
+        content: '\e68f';
+      }
+    }
+    //未发货
+    .icon-nosend {
+      &::before {
+        content: '\e62f';
+      }
+    }
+    //未收货
+    .icon-noreceive {
+      &::before {
+        content: '\e6b1';
+      }
+    }
+    //未评价
+    .icon-nosay {
+      &::before {
+        content: '\e615';
+      }
+    }
+    //退款
+    .icon-refund {
+      &::before {
+        content: '\e603';
+      }
+    }
+
+    //加载条
+
+    //２号加载条
+    @-webkit-keyframes load2{
+        0%{ filter: opacity(0.1); transform:scale(0.3);}
+        30%{ filter: opacity(0.3); transform:scale(0.5);}
+        60%{ filter: opacity(0.6); transform:scale(0.8);}
+        90%{ filter: opacity(1); transform:scale(1);}
+        100%{ filter: opacity(0.6); transform:scale(0.8);}
+    }
+    .loadding-2{
+      //background: #fff;
+      align-content: center;
+      top: 1.7rem;
+      left: 1.7rem;
+      position: absolute;
+
+      i {
+        width: 4px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        background: #999;
+        filter: opacity(0.4);
+        transform:scale(0.6);
+
+        &:nth-child(1){
+          top: -10px;
+          left: 0;
+          -webkit-animation: load2 .8s ease-in .1s infinite;
+        }
+        &:nth-child(2){
+            top: -7px;
+            left: -7px;
+            -webkit-animation: load2 .8s ease-in .2s infinite;
+        }
+        &:nth-child(3){
+            top: 0px;
+            left: -10px;
+            -webkit-animation: load2 .8s ease-in .3s infinite;
+        }
+        &:nth-child(4){
+            top: 7px;
+            left: -7px;
+            -webkit-animation: load2 .8s ease-in .4s infinite;
+        }
+        &:nth-child(5){
+            top: 10px;
+            left: 0px;
+            -webkit-animation: load2 .8s ease-in .5s infinite;
+        }
+        &:nth-child(6){
+            top: 7px;
+            left: 7px;
+            -webkit-animation: load2 .8s ease-in .6s infinite;
+        }
+        &::nth-child(7){
+            top: 0px;
+            left: 10px;
+            -webkit-animation: load2 .8s ease-in .7s infinite;
+        }
+        &:nth-child(8){
+            top: -7px;
+            left: 7px;
+            -webkit-animation: load2 .8s ease-in .8s infinite;
+        }
+      }
+    }
+
+    .body {
+      .row {
+        & > div, & > li {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      //顶部导航条
+      nav {
+        &.topbar{
+         background: #f3f3f3;
+         height: 4.4rem !important;
+         padding: 1rem 1rem 1rem .5rem !important;
+         z-index: 10;
+         &.btm-line{
+           border-bottom: .1rem solid #eee;
+         }
+         //margin: 0 !important;
+         .row {
+           margin: 0;
+           height: 2.8rem;
+           line-height: 2.6rem !important;
+           div {
+             padding: 0 ;
+             &.col-xs-1 {
+               font-size: 2rem !important;
+             }
+             &.col-xs-10 {
+              font-size: 1.6rem !important;
+              text-align: center;
+             }
+           }
+         }
+       }
+      }
+      //有导航－顶部有边距
+      .has-nav {
+        margin-top: 6rem;
+      }
+
+      form {
+        width: 90%;
+        margin: 1.5rem auto;
+        border: .1rem solid #ddd;
+        padding: 1.5rem;
+        .bg-white;
+        h2{
+          font-size: 1.6rem;
+          margin: 0 0 1.5rem 0;
+        }
+        .form-group {
+          position: relative;
+          label {
+            font-size: 1.4rem;
+            font-weight: 100;
+          }
+          span {
+            &.iconfont {
+              top: .6rem;
+              left: .8rem;
+              font-size: 1.8rem;
+            }
+          }
+          .form-control{
+            padding-left: 3rem ;
+            height: 3.4rem;
+            line-height: 3.4rem;
+            font-size: 1.4rem;
+          }
+        }
+        .input-group {
+          height: 3.4rem;
+          margin: 1.5rem 0 0rem 0;
+          padding: 0;
+          input {
+            height: 3.4rem;
+            font-size: 1.6rem !important;
+          }
+          span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0;
+            margin: 0;
+            &.input-group-btn {
+              img {
+                height: 3.4rem !important;
+                width: 12rem !important;
+                border-radius: 0 .4rem .4rem 0;
+              }
+              button {
+                height: 3.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

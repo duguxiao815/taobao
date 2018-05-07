@@ -16,7 +16,6 @@
         <h3>新用户注册</h3>
       </header>
       <form>
-
         <div class="form-group">
           <span class="glyphicon glyphicon-user username-dot"></span>
           <input class="form-control required" type="text" placeholder="用户名/邮箱" id="username" name="username" autofocus="autofocus" maxlength="20"/>
@@ -30,7 +29,7 @@
           <input class="form-control required" type="password" placeholder="确认密码" id="repass" name="repass" autofocus="autofocus" maxlength="20"/>
         </div>
         <div class="form-group">
-          <span class="iconfont icon-phone password-dot"></span>
+          <span class="iconfont icon-phone phone-dot"></span>
           <input class="form-control required" type="tel" placeholder="手机号码" id="phone" name="phone" autofocus="autofocus" maxlength="20"/>
         </div>
         <div class="input-group">
@@ -53,13 +52,12 @@
           <a class="link-red" href=".html"></a>
         </div>
       </div>
-
     </div>
   </body>
 <script type="text/javascript">
   var user = $('#username');
   var ver = $('#verification');
-  var wid = user.width() + 44;
+  var wid = user.width() + 50;
 
   $(function() {
     resize();

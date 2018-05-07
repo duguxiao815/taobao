@@ -83,11 +83,15 @@
 						</div>
 						<div class="col-xs-3 icon-cart">
 							<div class="nav-li-img iconfont"></div>
-							<div class="nav-li-text">购物车</div>
+							<div class="nav-li-text">
+								<a href="cart.html">购物车</a>
+							</div>
 						</div>
 						<div class="col-xs-3 icon-order">
 							<div class="nav-li-img iconfont"></div>
-							<div class="nav-li-text">我的订单</div>
+							<div class="nav-li-text">
+								<a href="orders.html">我的订单</a>
+							</div>
 						</div>
 					</div>
 					<div class="nav-ul row">
@@ -102,11 +106,15 @@
 						</div>
 						<div class="col-xs-3 icon-service">
 							<div class="nav-li-img iconfont"></div>
-							<div class="nav-li-text">客户服务</div>
+							<div class="nav-li-text">
+								<a href="article.html">客户服务</a>
+							</div>
 						</div>
 						<div class="col-xs-3 icon-member">
 							<div class="nav-li-img iconfont"></div>
-							<div class="nav-li-text"><a href="login.html">个人中心</a></div>
+							<div class="nav-li-text">
+								<a href="member.html">个人中心</a>
+							</div>
 						</div>
 					</div>
 					<div class="hot-news">
@@ -407,7 +415,7 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
+	<script type="text/javascript">            background: red;
 		var w = window.screen.width;
 		var h = window.screen.height;
 		var cw = $(window).width();
@@ -416,7 +424,7 @@
 		var onLine = navigator.onLine;
 		//var x=document.getElementById("demo");
 		function getLocation() {
-			alert(cw+ '*' + ch);
+			//alert(cw+ '*' + ch);
 			  if (navigator.geolocation) {
 						//alert('yes');
 			    	navigator.geolocation.getCurrentPosition(showPosition);
