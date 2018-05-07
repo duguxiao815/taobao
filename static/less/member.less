@@ -197,13 +197,19 @@
               .shop-header {
                 height: 4rem;
                 line-height: 4rem;
+                padding: 0 .6rem;
                 div {
                   height: inherit;
                   &.shop-title {
                     float: left;
+                    span {
+                      margin-left: .5rem;
+                      font-size: 1.2rem;
+                    }
                   }
                   &.shop-status {
                     float: right;
+                    font-size: 1.2rem;
                   }
                 }
               }
@@ -211,14 +217,92 @@
               .shop-goods-list {
                 ul {
                   li {
-                    height: 9em;
+                    margin: .2rem 0;
+                    height: 7.6rem;
+                    padding: .3rem .6rem;
+                    background: #fbfbfb;
                     .goods-left {
+                      width: 79%;
+                      float: left;
                       .goods-img {
                         float: left;
-                        width: 9rem;
+                        width: 7rem;
+                        height: 7rem;
+                        margin-right: .4rem;
                         img  {
-
+                          width: 100%;
+                          height: 100%;
                         }
+                      }
+                      .goods-text {
+                        .goods-title {
+                          padding: .3rem 0;
+                          font-size: 1.3rem;
+                          line-height: 1.6rem;
+                          height: 3.4rem;
+                        }
+                        .goods-sectit {
+                          padding: .5rem 0;
+                          font-size: 1.2rem;
+                          line-height: 1.4rem;
+                          color: #999;
+                        }
+                      }
+                    }
+                    .goods-right {
+                      width: 21%;
+                      float: left;
+                      padding: .4rem 0;
+                      div {
+                        text-align: right;
+                        &.price {
+                          font-weight: bold;
+                          font-size: 1.4rem;
+                          color: #555;
+                        }
+                        &.old-price {
+                          font-size: 1.2rem;
+                          font-weight: 400;
+                          color: #666;
+                        }
+                        .num {
+                          font-size: 1.1rem;
+                          height: 1.2rem;
+                          line-height: 1.2rem;
+                        }
+                        span {
+                          &.icon-rmb {
+                            font-size: 1rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div {
+                    &.shop-total {
+                      height: 3rem;
+                      line-height: 3rem;
+                      font-size: 1.2rem;
+                      text-align: right;
+                      padding: 0 .5rem;
+                      span {
+                        &.icon-rmb {
+                          font-size: 1rem;
+                        }
+                        &.freight {
+                          font-size: 1.6rem;
+                        }
+                      }
+                    }
+                    &.shop-bar {
+                      padding: .4rem;
+                      height: 3.8rem;
+                      button {
+                        border-radius: 1.5rem;
+                        padding: .1rem 1rem;
+                        float: right;
+                        font-size: 1.4rem !important;
+                        margin: 0 .5rem;
                       }
                     }
                   }

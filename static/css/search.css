@@ -4,8 +4,8 @@ html {
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot');
-  src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.woff') format('woff'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.eot');
+  src: url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.woff') format('woff'), url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.svg#iconfont') format('svg');
   
   /* project id 603996 */
 }
@@ -77,6 +77,13 @@ html body .ul {
 html body .bg-white {
   background-color: #ffffff !important;
 }
+html body .overflow-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 html body .icon-back::before {
   content: '\e624';
 }
@@ -145,6 +152,9 @@ html body .icon-my-cart::before {
 }
 html body .icon-comment::before {
   content: '\e615';
+}
+html body .icon-rmb::before {
+  content: '\e6fb';
 }
 @-webkit-keyframes load2 {
   0% {

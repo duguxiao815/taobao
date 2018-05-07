@@ -2,11 +2,11 @@ html{
   //阿里图标字体库
   @font-face {
     font-family: 'iconfont';  /* project id 603996 */
-    src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot');
-    src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.woff') format('woff'),
-    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.eot');
+    src: url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_603996_g7ccd41npb9pmn29.svg#iconfont') format('svg');
   }
 
   .iconfont{
@@ -90,6 +90,14 @@ html{
     }
     .bg-white {
       .bg;
+    }
+
+    .overflow-2 {
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:-webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     //返回图标
@@ -228,6 +236,12 @@ html{
     .icon-comment {
       &::before {
         content: '\e615';
+      }
+    }
+    //人民币符号
+    .icon-rmb {
+      &::before {
+        content: '\e6fb';
       }
     }
 
