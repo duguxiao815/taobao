@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/member.css">
+		<!--基本库-->
+		<script src="/static/js/jquery-3.3.1.min.js"></script>
+		<script src="/static/js/bootstrap-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="body">
+      <!-- <header id="header" class="">
+      </header> -->
+      <nav class="topbar btm-line navbar-fixed-top bg-default">
+        <div class="row">
+          <div class="col-xs-1 back iconfont icon-back" id="icon-back"></div>
+          <div class="col-xs-10">我的订单</div>
+          <div class="col-xs-1" id="icon-back"></div>
+        </div>
+      </nav>
+
+      <div class="tabs has-nav-0">
+        <ul class="tab-item">
+          <li>
+            <a href="#">全部</a>
+          </li>
+          <li class="active">
+            <a href="#">未付款</a>
+          </li>
+          <li>
+            <a href="#">待发货<a/>
+          </li>
+          <li>
+            <a href="#">待收货</a>
+          </li>
+          <li>
+            <a href="#">待评价</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-list-view">
+        <!-- 店铺区 -->
+        <div class="shop-box">
+          <div class="shop-header">
+            <div class="shop-title">
+              洛维斯旗舰店<span class="iconfont icon-next"></span>
+            </div>
+            <!-- 商家状态 单个商品时就是商品状态 -->
+            <div class="shop-status">
+                卖家已发货
+            </div>
+          </div>
+          <div class="shop-goods-list">
+            <ul>
+              <li class="row">
+                <div class="goods-left col-xs-9">
+                  <div class="goods-img">
+                    <img src="/uploads/goods14.jpg" class="img-responsive" />
+                  </div>
+                  <div class="goods-text">
+
+                  </div>
+                </div>
+                <div class="goods-right col-xs-3">
+                  <span class="price">Y328.00</span>
+                  <span class="old-price">Y668.00</span>
+                  <span class="num">X 1</span>
+                </div>
+              </li>
+              <div class="shop-total">
+                共２件商品，合计：Ｙ<span class="freight">358.00</span>(含运费Ｙ0.00)
+              </div>
+              <div class="shop-bar">
+                <button class="btn btn-default">查看物流</button>
+                <button class="btn ">延迟收货</button>
+                <button class="btn ">确认收货</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+<script type="text/javascript">
+
+  $(function(){
+    resize();
+  });
+  //改变窗口大小
+  $(window).resize(function(){
+    resize();
+  });
+  var resize = function() {
+    var h =  window.innerHeight;
+    $('#btn-submit').on('click', function(){
+      location.href = 'member.html';
+    });
+  };
+</script>
+</html>

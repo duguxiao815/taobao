@@ -1,12 +1,12 @@
 @import "common.less";
-
+@default-color: #FB5C06;
 @media screen {
   html {
     body {
       background: #eee;
       .body{
         header {
-          background: rgb(252, 92, 4);
+          background: @default-color;
           & > .row  {
             height: 10rem;
             margin: 0 1rem;
@@ -78,6 +78,16 @@
             }
           }
         }
+
+        nav {
+          &.bg-default {
+            background: @default-color;
+            div {
+              color: white;
+            }
+          }
+        }
+
         section {
           margin: .6rem 0;
           background: white;
@@ -132,6 +142,13 @@
               font-size: 1.5rem;
               padding:0  1.2rem;
               border-bottom: .1rem solid #e6e6e6;
+              em {
+                padding-right: 1rem;
+                font-size: 2rem;
+                line-height: 4rem;
+                float: left;
+                color: @default-color;
+              }
               span {
                 float: right;
                 font-size: 1.4rem;
@@ -139,6 +156,73 @@
               }
               &:last-child {
                 border-bottom: 0;
+              }
+            }
+          }
+        }
+        div {
+          //background: white;
+          &.tabs {
+            height: 4rem;
+            line-height: 4rem;
+            background: white;
+            ul {
+              height: inherit;
+              line-height: inherit;
+              padding: 0 .3rem;
+              li {
+                height: inherit;
+                float: left;
+                width: 20%;
+                font-size: 1.5rem;
+                text-align: center;
+                &.active {
+                  line-height: 3.8rem;
+                  border-bottom: .2rem solid @default-color;
+                  a {
+                    color: red;
+                  }
+                }
+              }
+            }
+          }
+          //订单列表ｖiew
+          &.order-list-view {
+            margin: .2rem 0;
+            //商家区
+            .shop-box {
+              margin: .6rem 0;
+              background: white;
+              //商家标头
+              .shop-header {
+                height: 4rem;
+                line-height: 4rem;
+                div {
+                  height: inherit;
+                  &.shop-title {
+                    float: left;
+                  }
+                  &.shop-status {
+                    float: right;
+                  }
+                }
+              }
+              //商品列表
+              .shop-goods-list {
+                ul {
+                  li {
+                    height: 9em;
+                    .goods-left {
+                      .goods-img {
+                        float: left;
+                        width: 9rem;
+                        img  {
+
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }

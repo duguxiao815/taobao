@@ -1,10 +1,11 @@
 html {
   font-size: 10px;
+  color: #666;
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot');
-  src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.woff') format('woff'), url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot');
+  src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.woff') format('woff'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.ttf') format('truetype'), url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.svg#iconfont') format('svg');
   
   /* project id 603996 */
 }
@@ -33,17 +34,20 @@ html body .col-xs-5 {
   float: left;
 }
 html body a {
-  color: #333333;
+  color: #666;
   text-decoration: none;
 }
 html body a:link {
-  color: #333333;
+  color: #666;
+  text-decoration: none;
 }
 html body a:active {
-  color: #333333;
+  color: #666;
+  text-decoration: none;
 }
 html body a:visited {
-  color: #333333;
+  text-decoration: none;
+  color: #666;
 }
 html body .cl {
   clear: both;
@@ -74,7 +78,7 @@ html body .bg-white {
   background-color: #ffffff !important;
 }
 html body .icon-back::before {
-  content: '\e617';
+  content: '\e624';
 }
 html body .icon-del::before {
   content: '\e6b4';
@@ -126,6 +130,21 @@ html body .icon-nosay::before {
 }
 html body .icon-refund::before {
   content: '\e603';
+}
+html body .icon-my-collection::before {
+  content: '\e60c';
+}
+html body .icon-lines::before {
+  content: '\e630';
+}
+html body .icon-quan::before {
+  content: '\e606';
+}
+html body .icon-my-cart::before {
+  content: '\e62c';
+}
+html body .icon-comment::before {
+  content: '\e615';
 }
 @-webkit-keyframes load2 {
   0% {
@@ -236,6 +255,12 @@ html body .body nav.topbar .row div.col-xs-10 {
 }
 html body .body .has-nav {
   margin-top: 6rem;
+}
+html body .body .has-nav-0 {
+  margin-top: 4.4rem;
+}
+html body .body .has-nav-1 {
+  margin-top: 5rem;
 }
 html body .body form {
   width: 90%;

@@ -2,12 +2,13 @@ html{
   //阿里图标字体库
   @font-face {
     font-family: 'iconfont';  /* project id 603996 */
-    src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot');
-    src: url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.woff') format('woff'),
-    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_603996_09q39qyahwhzolxr.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot');
+    src: url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.woff') format('woff'),
+    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_603996_g1mbnnv6lhqcl3di.svg#iconfont') format('svg');
   }
+
   .iconfont{
     font-family:"iconfont" !important;
     font-size:1.6rem;
@@ -17,6 +18,7 @@ html{
     -moz-osx-font-smoothing: grayscale;
   }
   font-size: 10px;
+  color: #666;
   body {
     //扩展栅格系统
     /* define bootstrap 5 columns */
@@ -36,16 +38,19 @@ html{
 
     //超链接样式
     a{
-      color: #333333;
+      color: #666;
       text-decoration: none;
       &:link{
-        color: #333333;
+        color: #666;
+        text-decoration: none;
       }
       &:active {
-        color: #333333;
+        color: #666;
+        text-decoration: none;
       }
       &:visited {
-        color: #333333;
+        text-decoration: none;
+        color: #666;
       }
     }
 
@@ -90,7 +95,7 @@ html{
     //返回图标
     .icon-back {
       &::before {
-        content: '\e617';
+        content: '\e624';
       }
     }
     //删除图标
@@ -193,6 +198,36 @@ html{
     .icon-refund {
       &::before {
         content: '\e603';
+      }
+    }
+    //收藏
+    .icon-my-collection {
+      &::before {
+        content: '\e60c';
+      }
+    }
+    //轨迹
+    .icon-lines {
+      &::before {
+        content: '\e630';
+      }
+    }
+    //优惠券
+    .icon-quan {
+      &::before {
+        content: '\e606';
+      }
+    }
+    //购物车
+    .icon-my-cart {
+      &::before {
+        content: '\e62c';
+      }
+    }
+    //我的评价
+    .icon-comment {
+      &::before {
+        content: '\e615';
       }
     }
 
@@ -305,6 +340,13 @@ html{
       .has-nav {
         margin-top: 6rem;
       }
+      .has-nav-0 {
+        margin-top: 4.4rem;
+      }
+      .has-nav-1 {
+        margin-top: 5rem;
+      }
+
 
       form {
         width: 90%;
