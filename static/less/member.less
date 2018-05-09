@@ -90,9 +90,12 @@
 
         section {
           margin: .6rem 0;
-          background: white;
+          //
           border-top: .1rem solid #ddd;
           border-bottom: .1rem solid #ddd;
+					&.my-order {
+						background: white;
+					}
           div {
             &.item-header {
               padding: .5rem 1rem;
@@ -135,7 +138,10 @@
               }
             }
           }
+					
           ul {
+						margin-bottom: .5rem;
+						background: white;
             li {
               height: 4rem;
               line-height: 4rem;
@@ -157,6 +163,45 @@
               &:last-child {
                 border-bottom: 0;
               }
+							//头像/图片组件
+							&.item-face {
+								height: 7rem;
+								padding: .2rem .5rem;
+								div {
+									height: calc(~'100% - 0rem');
+									float: left;
+									.faceimg {
+										width: 6.6rem;
+										height: 6.6rem;
+										margin-right: .6rem;
+									}
+									.text {
+										padding: .4rem 0;
+										div {
+											float: none;
+											&.user-name{
+												line-height: 3.2rem;
+												font-size: 2rem;
+												height: 3.2rem;
+											}
+											&.nike-name {
+												font-size: 1.4rem;
+												color: #999;
+												line-height: 2rem;
+												height: 2rem;
+											}
+										}
+									}
+									.icon-next {
+										//float: left;
+										font-size: 1.6rem;
+										height: inherit;
+										line-height: 6.6rem;
+										text-align: center !important;
+										width:100%;
+									}
+								}
+							}
             }
           }
         }
@@ -194,6 +239,7 @@
               margin: .6rem 0;
               background: white;
               //商家标头
+							
               .shop-header {
                 height: 4rem;
                 line-height: 4rem;

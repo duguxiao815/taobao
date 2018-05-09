@@ -234,19 +234,22 @@ html body .loadding-2 i:nth-child(8) {
   left: 7px;
   -webkit-animation: load2 0.8s ease-in 0.8s infinite;
 }
+html body .body .row {
+  margin: 0;
+}
 html body .body .row > div,
 html body .body .row > li {
   padding: 0;
   margin: 0;
 }
 html body .body nav.topbar {
-  background: #f3f3f3;
+  background: white;
   height: 4.4rem !important;
   padding: 1rem 1rem 1rem .5rem !important;
   z-index: 10;
 }
 html body .body nav.topbar.btm-line {
-  border-bottom: .1rem solid #eee;
+  border-bottom: .1rem solid #ddd;
 }
 html body .body nav.topbar .row {
   margin: 0;

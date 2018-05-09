@@ -234,19 +234,22 @@ html body .loadding-2 i:nth-child(8) {
   left: 7px;
   -webkit-animation: load2 0.8s ease-in 0.8s infinite;
 }
+html body .body .row {
+  margin: 0;
+}
 html body .body .row > div,
 html body .body .row > li {
   padding: 0;
   margin: 0;
 }
 html body .body nav.topbar {
-  background: #f3f3f3;
+  background: white;
   height: 4.4rem !important;
   padding: 1rem 1rem 1rem .5rem !important;
   z-index: 10;
 }
 html body .body nav.topbar.btm-line {
-  border-bottom: .1rem solid #eee;
+  border-bottom: .1rem solid #ddd;
 }
 html body .body nav.topbar .row {
   margin: 0;
@@ -401,9 +404,11 @@ html body .body form .input-group span.input-group-btn button {
   }
   html body .body section {
     margin: .6rem 0;
-    background: white;
     border-top: .1rem solid #ddd;
     border-bottom: .1rem solid #ddd;
+  }
+  html body .body section.my-order {
+    background: white;
   }
   html body .body section div.item-header {
     padding: .5rem 1rem;
@@ -441,6 +446,10 @@ html body .body form .input-group span.input-group-btn button {
     height: 3rem;
     margin: .4rem auto;
   }
+  html body .body section ul {
+    margin-bottom: .5rem;
+    background: white;
+  }
   html body .body section ul li {
     height: 4rem;
     line-height: 4rem;
@@ -462,6 +471,43 @@ html body .body form .input-group span.input-group-btn button {
   }
   html body .body section ul li:last-child {
     border-bottom: 0;
+  }
+  html body .body section ul li.item-face {
+    height: 7rem;
+    padding: .2rem .5rem;
+  }
+  html body .body section ul li.item-face div {
+    height: calc(100% - 0rem);
+    float: left;
+  }
+  html body .body section ul li.item-face div .faceimg {
+    width: 6.6rem;
+    height: 6.6rem;
+    margin-right: .6rem;
+  }
+  html body .body section ul li.item-face div .text {
+    padding: .4rem 0;
+  }
+  html body .body section ul li.item-face div .text div {
+    float: none;
+  }
+  html body .body section ul li.item-face div .text div.user-name {
+    line-height: 3.2rem;
+    font-size: 2rem;
+    height: 3.2rem;
+  }
+  html body .body section ul li.item-face div .text div.nike-name {
+    font-size: 1.4rem;
+    color: #999;
+    line-height: 2rem;
+    height: 2rem;
+  }
+  html body .body section ul li.item-face div .icon-next {
+    font-size: 1.6rem;
+    height: inherit;
+    line-height: 6.6rem;
+    text-align: center !important;
+    width: 100%;
   }
   html body .body div.tabs {
     height: 4rem;
